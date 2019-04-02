@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+  <title>Автоответ</title>
+  <link rel="shortcut icon" href="/instagram-integration/favicon.ico"/>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<link href="index.css" rel="stylesheet"></head>
+<body>
+  <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+      <a class="navbar-brand col-6 col-sm-3 col-md-2 mr-0 text-info" href="./"><strong>S</strong>ervice</a>
+      <ul class="navbar-nav navbar-expand-md px-3">
+          <li class="nav-item text-nowrap mr-3">
+              <a class="nav-link js_register" href="./register.html">Регистрация</a>
+          </li>
+          <li class="nav-item text-nowrap mr-3">
+              <a class="nav-link js_login" href="./login.html">Логин</a>
+          </li>
+          <li class="nav-item text-nowrap mr-3" style="display:none">
+              <a class="nav-link js_logOut" href="#">Выход</a>
+          </li>
+      </ul>
+      <div class="login-box mw-50 mx-auto d-none">
+      <form id="js_login-form">
+          <p class="class-header">
+              <strong>Логин</strong>
+          </p>
+          <div class="fields">
+              <div class="field">
+                  <div style="color:red">
+                      <span class="field-validation-valid validator" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+                  </div>
+                  <input class="padding form-control text" id="email" name="mail" placeholder="Ваш e-mail*" required="true" type="email">
+              </div>
+      
+              <div class="field">
+                  <input class="padding form-control text" id="loginform-pass" name="pass" placeholder="Ваш пароль*" required="true">
+              </div>
+      
+          </div>
+          <button class="btn btn-block btn-primary my-button" id="js_login_btn">Логин</button>
+      </form>
+      
+      </div>
+      <div class="register-box bg-light border mt-5 mx-auto position-absolute px-3 d-none" style="top:0;right:0">
+        <form id="js_form">
+            <div class="control-group" style="display:flow-root">
+                <a href="/Language/Change?LanguageAbbrevation=en" style="margin-right:5px">
+                    ENG
+                </a>
+                <a style="margin-right:5px">|</a>
+                <a href="/Language/Change?LanguageAbbrevation=ru" style="margin-right:5px">
+                    RU
+                </a>
+            </div>
+            <p class="class-header">
+                <strong>Регистрация</strong>
+            </p>
+            <div class="fields">
+                <div class="field">
+                    <div style="color:red"> <span class="field-validation-valid validator" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+                    </div>
+                    <input class="padding form-control text" id="reg-email" name="mail" placeholder="Ваш e-mail*" required="true">
+                </div>
+                <div class="field">
+                    <input class="padding form-control text" id="reg-pass" name="pass" placeholder="Ваш пароль*" required="true">
+                </div>
+                <div class="field">
+                    <input class="padding form-control text" id="reg-pass-confirm" name="pass-confirm" placeholder="Ваш пароль еще раз" required="true">
+                </div>
+      
+            </div>
+            <button class="btn btn-block btn-primary my-button" id="js_feedback_btn">Регистрация</button>
+        </form>
+        <p align="center" class="block-info">
+            Продолжая, вы соглашаетесь <a href="" target="_blank">Условия использования</a><br>
+      
+            Если он у вас есть  <a href="/Login">Войти</a>
+        </p>
+      </div>
+      
+  </nav>
+
+<div class="wrapper__content">
+  <div class="container-fluid">
+    <div class="row">
+
+      <nav class="col-md-2 aside-burger-menu">
+          <div class="sidebar-sticky">
+              <ul class="nav flex-column">
+      
+                  
+      
+                  <li class="nav-item">
+                      <a class="nav-link text-light" href="./instagram-accounts.html">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                      Instagram аккаунты</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link text-light" href="./messages.html">
+                      <i class="fas fa-comments mr-1"></i>Direct</a></li>
+                  <li class="nav-item"><a class="nav-link text-light" href="./follow.html">
+                      <i class="fas fa-sign-in-alt mr-1"></i>Подписки</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link text-light" href="./unfollow.html">
+                      <i class="fas fa-sign-out-alt mr-1"></i>Отписки</a></li>
+                  <li class="nav-item"><a class="nav-link text-light" href="./autoanswer.html">
+                      <i class="fas fa-handshake mr-1"></i>
+                      Автоответ</a></li>
+                  <li class="nav-item"><a class="nav-link text-light" href="./autogreeting.html">
+                      <i class="fas fa-hand-peace mr-1"></i>Автоприветствие</a></li>
+                  <li class="nav-item"><a class="nav-link text-light" href="./stories.html">
+                      <i class="fas fa-history mr-1"></i>Просмотр Stories</a></li>
+      
+              </ul>
+      
+          </div>
+      </nav>
+      
+
+      <main role="main" class="js_main col-md-9 ml-sm-auto col-lg-10 px-0 px-sm-4">
+        
+        
+        
+            
+            <div class="container-fluid autoanswer-page">
+                <h3>Автоответ</h3>
+                <p>Система будет отправлять сообщения пользователям по ключевым словам.</p>
+            
+                <div class="container-fluid">
+                    <div class="row">
+                    <div class="col-3">
+                        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                            <a class="nav-link active" id="v-pills-create-task-tab" data-toggle="pill" href="#create-task" role="tab" aria-controls="create-task" aria-selected="false">Создать задание</a>
+                            <a class="nav-link" id="v-pills-all-tab" data-toggle="pill" href="#all-tasks" role="tab" aria-controls="all-tasks" aria-selected="true">История заданий</a>
+                            <a class="nav-link" id="v-pills-logs-tab" data-toggle="pill" href="#logs" role="tab" aria-controls="logs" aria-selected="true">Логи</a>
+                        </div>
+                    </div>
+                    <div class="col-9">
+                        <div class="tab-content" id="v-pills-tabContent">
+                            <div class="tab-pane fade show" id="all-tasks" role="tabpanel" aria-labelledby="v-pills-all-tab">
+                                <div class="tasks tasks-all--box">
+                                    <h3></h3>
+                                    <ul class="tasks-all list-unstyled"></ul>
+                                </div>
+                                
+                            </div>
+                            <div class="tab-pane fade show" id="logs" role="tabpanel" aria-labelledby="v-pills-logs-tab">
+                                <div class="log-tasks--box mt-2">
+                                    <div class="log-users-list"></div>
+                                    <nav aria-label="Page navigation">
+                                        <ul class="logs-pagination pagination justify-content-center"></ul>
+                                    </nav>
+                                    <ul class="log-tasks list-unstyled">
+                                    </ul>
+                                </div>                </div>
+                            <div class="tab-pane fade show active" id="create-task" role="tabpanel" aria-labelledby="v-pills-create-task-tab">
+                                <div class="js_add-new-task">
+                                    
+                                    <div class="row">
+                                        <div class="col-md-12 form-box">
+            <form role="form" name="wizard-form" class="wizard-form col-md-12 was-validated---" action="javascript:void(0);">
+                
+                                                    <fieldset>
+                                                        <div class="form-top">
+                                                            <div class="form-top-left">
+                                                                <h3><span><i class="fa fa-calendar-check-o" aria-hidden="true"></i></span>Выберите аккаунт</h3>
+                                                                <p>Шаг 1/2</p>
+                                                            </div>
+                                                        </div>
+                                                    
+                                                        <div class="form-bottom">
+                                                            <div class="profile-user js_profile-user-follow">
+                                                                <div class="container">
+                                                                        <div class="row">
+                                                                            <div class="col-12 p-3">
+                                                                
+                                                                                <div class="spinner-box justify-content-center">
+                                                                                    <div class="spin-animation">
+                                                                                        <svg aria-hidden="true" data-prefix="far" data-icon="sync-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-sync-alt fa-w-16 fa-fw fa-2x"><path fill="currentColor" d="M483.515 28.485L431.35 80.65C386.475 35.767 324.485 8 256 8 123.228 8 14.824 112.338 8.31 243.493 7.971 250.311 13.475 256 20.301 256h28.045c6.353 0 11.613-4.952 11.973-11.294C66.161 141.649 151.453 60 256 60c54.163 0 103.157 21.923 138.614 57.386l-54.128 54.129c-7.56 7.56-2.206 20.485 8.485 20.485H492c6.627 0 12-5.373 12-12V36.971c0-10.691-12.926-16.045-20.485-8.486zM491.699 256h-28.045c-6.353 0-11.613 4.952-11.973 11.294C445.839 370.351 360.547 452 256 452c-54.163 0-103.157-21.923-138.614-57.386l54.128-54.129c7.56-7.56 2.206-20.485-8.485-20.485H20c-6.627 0-12 5.373-12 12v143.029c0 10.691 12.926 16.045 20.485 8.485L80.65 431.35C125.525 476.233 187.516 504 256 504c132.773 0 241.176-104.338 247.69-235.493.339-6.818-5.165-12.507-11.991-12.507z"></path></svg>
+                                                                                    </div>
+                                                                                </div>
+                                                                
+                                                                                <ul class="list-unstyled accounts-list">
+                                                                                </ul>
+                                                                
+                                                                                <div class="error-msg"></div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                
+                                                            </div>
+                                                            <button type="button" class="btn btn-blue btn-next" disabled="disabled">Дальше</button>
+                                                        </div>
+                                                    </fieldset>
+                                                    <fieldset>
+                                                        <div class="form-top">
+                                                            <div class="form-top-left">
+                                                                <h3><span><i class="fa fa-calendar-check-o" aria-hidden="true"></i></span>Настройка автоответов</h3>
+                                                                <p>Шаг 2/2</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-bottom">
+                                                            <div class="autoanswer-text-fields">
+                                                                <div class="row">
+                                                                    <div class="col">
+                                                                        <textarea class="form-control answer-words" rows="4" placeholder="Введите ключевые слова"></textarea>
+                                                                    </div>
+                                                                    <div class="col">
+                                                                        <textarea class="form-control answer-messages" rows="4" data-emoji-picker="true" style="padding:.25rem 1.75rem .25rem .25rem;width:100%;min-height:42px" placeholder="Введите сообщение"></textarea>
+                                                        
+                                                                        <div class="file-upload-btn-box" data-toggle="tooltip" data-placement="top" title="Добавить изображение">
+                                                                            <button class="file-upload-btn btn btn-success" type="button">
+                                                                                <i class="far fa-image fa-lg"></i>
+                                                                            </button>
+                                                                        </div>
+                                                        
+                                                                        <button type="button" class="btn btn-success post-upload-btn js_autoanswer-add-post" title="Добавить публикацию" data-toggle="tooltip" data-placement="top" data-post-info="todo: get req to user: ">
+                                                                            <span class="js_open-posts-gridModal" data-container="body" data-toggle="popover" data-placement="bottom" data-content="У текущего аккаунта нет ни одного поста">
+                                                                            <i class="far fa-images fa-lg"></i>
+                                                                            </span>
+                                                                        </button>
+                                                                        <div class="mt-2">
+                                                                            <div class="file-upload">
+                                                                            
+                                                                              <div class="image-upload-wrap">
+                                                                                <input class="file-upload-input" type="file" accept=".jpg, .jpeg"/>
+                                                                              </div>
+                                                                              <div class="file-upload-content">
+                                                                                <img class="file-upload-image" src="#" alt="your image"/>
+                                                                                <div class="image-title-wrap">
+                                                                                  <button type="button" class="remove-image btn btn-warning">Удалить <span class="image-title">Загрузить</span></button>
+                                                                                </div>
+                                                                              </div>
+                                                                            </div>
+                                                                            
+                                                                            
+                                                                            
+                                                                            
+                                                                            
+                                                                            
+                                                                            
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row py-3">
+                                                                <div class="col">
+                                                                    <button type="button" class="btn btn-outline-success js_add-autoanswer">+Добавить еще</button>
+                                                                </div>
+                                                            </div>
+                                                            <button type="button" class="btn btn-blue btn-previous mr-2">Назад</button>
+                                                            <button type="submit" class="btn btn-success">Запустить</button>
+                                                        </div>
+                                                        
+                                                        
+                                                        
+                                                        <div class="modal fade" id="postsGridModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                            <div class="modal-dialog modal-lg" role="document">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h2 class="modal-title" id="exampleModalLabel">Modal title</h2>
+                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                            <span aria-hidden="true">&times;</span>
+                                                                        </button>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                        
+                                                                        <div class="row">
+                                                                            <div id="small-img" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 center">
+                                                                                <ul class="list-unstyled posts-list row"></ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="modal-footer d-none">
+                                                                        <button type="button" class="btn btn-success" id="load-more">Загрузить еще</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        
+                                                    </fieldset>
+                
+                <div class="form-submit-finish position-absolute d-none">
+                    <div class="alert alert-success fade show">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
+                        <h2>Задание создано успешно!</h2>
+                    </div>
+                </div>
+                <div class="form-submit-finish--error position-absolute d-none">
+                    <div class="alert alert-danger fade show">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
+                        <h2>Ошибка при запуске задания</h2>
+                    </div>
+                </div>
+            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                </div>
+            </div>
+            
+            
+        
+      </main>
+
+    </div>
+  </div>
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="./jquery.steps.min.js"></script>
+<script type="text/javascript" src="index-app.js"></script></body>
+</html>
+
