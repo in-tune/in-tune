@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>Регистрация</title>
+    <link rel="shortcut icon" href="/instagram-integration/favicon.ico"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<link href="index.css" rel="stylesheet"></head>
+<body class="auth register">
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div class="card card-signin my-5">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Регистрация</h5>
+                    <form class="form-signin">
+                        <div class="form-label-group">
+                            <input type="email" id="inputEmail" class="form-control" name="mail" placeholder="Email адресс" required autofocus>
+                            <label for="inputEmail">Email адресс</label>
+                        </div>
+
+                        <div class="form-label-group">
+                            <input type="password" id="inputPassword" class="form-control" name="pass" placeholder="Пароль" required>
+                            <label for="inputPassword">Пароль</label>
+                        </div>
+                        <div class="form-label-group">
+                            <input type="password" id="inputPassword-repeat" class="form-control" name="pass-confirm" placeholder="Пароль еще раз" required>
+                            <label for="inputPassword-repeat">Пароль еще раз</label>
+                        </div>
+
+                        
+                        
+                        
+                        
+                        <button class="border-0 btn btn-lg btn-primary btn-block text-uppercase mt-5" type="submit">Зарегистрироваться</button>
+                        <p class="small text-muted">Регистрируясь на сервисе, вы принимаете правила и условия пользовательского соглашения.</p>
+                        <hr class="my-4">
+                        <div class="text-center">
+                            <a href="/instagram-integration/login.html">Логин</a>
+                        </div>
+                        
+                        
+                    </form>
+                </div>
+            </div>
+            <div class="card card-signin register--confirm my-5 d-none">
+                <div class="card-body">
+                    <div class="register-confirm-msg">
+                        Регистрация успешно завершена. Теперь добавьте свой аккаунт от instagram [<a href="/instagram-integration/">здесь</a>]
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  
+  <div class="modal fade" id="register-error-modal" tabindex="-1" role="dialog" aria-labelledby="error-modal-Title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="error-modal-Title">Ошибка регистрации</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            Ааккаунт с даным e-mail адрессом уже зарегистрирован
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+        </div>
+        </div>
+    </div>
+  </div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="./jquery.steps.min.js"></script>
+<script type="text/javascript" src="index-app.js"></script></body>
+</html>

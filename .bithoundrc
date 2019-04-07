@@ -1,0 +1,26 @@
+{
+  "ignore": [
+    "**/node_modules/**",    
+    "**/scripts/vendors/**",
+    "**/scripts/api-explorer/**",
+    "**/scripts/components/**",
+    "**/scripts/exel-reader/**",
+    "**/scripts/colorNamer/src/nameThatColor.js",
+    "**/widgets/main/lib/**",
+    "**/karma.conf.js",
+    "**/products-and-docs/apis/commerce-api/**",
+    "**/products-and-docs/**",
+    "**/tests/**",
+    "**/galen-test/**",
+    "**/jasmine-test/**",
+    "webpack.config.js",
+    "gulp.js"
+
+  ],
+  "critics": {
+    "wc": { "limit": 4000 }
+  },
+  "test": [
+    "**/tests/**"
+  ]
+}

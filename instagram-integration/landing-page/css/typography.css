@@ -1,0 +1,85 @@
+h1 {
+  font-family: 'SF UI Display Thin', Sans-serif, Arial;
+  font-size: 55px;
+  font-weight: 100;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+}
+#video .title,
+#difference .info,
+h2 {
+  font-family: 'SF UI Display Thin', Sans-serif, Arial;
+  font-size: 2.4375rem;
+  font-weight: 100;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: var(--blue-with-a-hint-of-purple);
+}
+
+h2 {
+  margin-bottom: 60px;
+}
+
+.font-medium {
+  font-family: 'SF UI Display Medium', Sans-serif, Arial;
+}
+
+#video .title .display-1 strong,
+.font-regular {
+    font-family: 'SF UI Display Regular', Sans-serif, Arial;
+}
+
+.font-thin {
+  font-family: 'SF UI Display Thin';
+}
+.font-light {
+  font-family: 'SF UI Display Light';
+}
+.font-ultra-light {
+  font-family: 'SF UI Display Ultralight';
+}
+
+p {
+  color: var(--purple-brown);
+  font-family: 'SF UI Display Regular';
+  font-size: 22px;
+}
+.text-white{
+  color: #fff;
+}
+
+.text-style-big {
+  font-family: 'SF UI Display Thin';
+  font-size: 82px;
+  font-weight: 100;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.99;
+  letter-spacing: normal;
+  text-align: left;
+  color: var(--bright-cyan);
+}
+
+.text-style-big small {
+  font-size: 22px;
+  vertical-align: middle;
+  margin: 0 -5px;
+}
+@media(min-width: 768px){
+  #video .title,
+  #difference .info,
+  h2 {
+    font-size: 3.4375rem;
+  }
+  .text-style-big small {
+    margin: 0 15px;
+  }
+}
+
+
