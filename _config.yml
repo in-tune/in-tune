@@ -19,3 +19,4 @@ url: "http://yourdomain.com" # the base hostname & protocol for your site
 markdown: kramdown
 
 exclude: [ "node_modules", "galen-test", "jasmine-test" ]
+theme: jekyll-theme-slate
